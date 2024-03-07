@@ -1,0 +1,71 @@
+server:
+  tomcat:
+    url-encoding: UTF-8
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: edu-spring-data-jdbc
+  profiles:
+    active: local
+  banner:
+    location: "classpath:banner.txt"
+# caffein cache 사용을 위해 cache name 설정
+  #cache:
+  #  cache-names: employee
+  cache:
+    type: redis
+  data:
+    redis:
+      host: 211.252.87.34 # 127.0.0.1
+      port: 30020 # 6379
+
+# R2DBC
+#spring.r2dbc.url=r2dbc:mariadb://localhost:3306/spring_test
+#spring.r2dbc.username=root
+#spring.r2dbc.password=root
+#spring.r2dbc.pool.enabled=true
+# spring.r2dbc.pool.initial-size=50
+# spring.r2dbc.pool.max-size=50
+# 재시작시 데이터 유지
+#  spring.session.redis.flush-mode=on_save
+  # Redis 서버 접속 대기시간 (서버 접속이 어려운 상황을 감안하도록 한다)
+#  spring.data.redis.timeout=500ms
+
+#  security:
+#    user:
+#      name: admin
+#      password: admin
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:8080
+
+# logging
+logging:
+  config: classpath:log4j2.xml
+
+#jasypt encryptor
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+
+jwt:
+  secret: CloudNativeKtEduSecretKey20240228CloudNativeKtEduSecretKey20240228CloudNativeKtEduSecretKey20240228
+
+# app
+app-info:
+  app-name: "edu-spring-data-jdbc"
+  title: "Cloud Native Edu API"
+  build:
+    version: '@project.version@'
+    timestamp: '@app.build.timestamp@'
+  user-id: "jake lee"
+  org-id: "KT"
+  desc: "EDU 관련 설명입니다."
+  doc-url: "https://github.com/kt-cloudnative/education/"
+  license: "Apache License"
+  license_url: "https://github.com/kt-cloudnative/education/"
+  version: "@app.build.timestamp@"
+  doc-desc: "교육용"
+
