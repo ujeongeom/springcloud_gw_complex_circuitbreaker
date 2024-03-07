@@ -1,9 +1,8 @@
-# springboot_cqrs_query_webflux
+# springboot_cqrs_query_webflux_security
 
 ***
 
-
-- JWT 삭제
+- JWT 출가
 - SpringBoot Webflux : 3.2.1
   - AOP 추가
   - LogFilter 추가
