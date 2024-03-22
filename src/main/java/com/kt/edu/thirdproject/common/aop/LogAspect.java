@@ -16,10 +16,10 @@ import java.lang.reflect.Method;
 @Component // (3)
 public class LogAspect {
 
-    @Pointcut("execution(* com.kt.edu.thirdproject.employee..*(..))") // (4)
+    @Pointcut("execution(* com.kt.edu.thirdproject..*(..))") // (4)
     public void all() {
     }
-
+    /*
     @Pointcut("execution(* com.kt.edu.thirdproject.employee.*Controller.*(..))") // (5)
     public void controller() {
     }
@@ -39,7 +39,7 @@ public class LogAspect {
     public void doKtedu(JoinPoint joinPoint) {
         log.info("[KT Edu] {} args = {}", joinPoint.getSignature(), joinPoint.getArgs());
     }
-
+  */
     @Around("all()") // (7)
     public Object logging(ProceedingJoinPoint joinPoint) throws Throwable { // (7-1)
         long start = System.currentTimeMillis();
@@ -53,7 +53,7 @@ public class LogAspect {
             log.info("timeMs = {}", timeMs);
         }
     }
-
+     /*
     @Before("controller() || service()") // (8)
     public void beforeLogic(JoinPoint joinPoint) throws Throwable { // (8-1)
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
@@ -70,6 +70,8 @@ public class LogAspect {
         }
     }
 
+
+
     @After("controller() || service()") // (9)
     public void afterLogic(JoinPoint joinPoint) throws Throwable { // (9-1)
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
@@ -84,5 +86,5 @@ public class LogAspect {
             }
 
         }
-    }
+    }*/
 }

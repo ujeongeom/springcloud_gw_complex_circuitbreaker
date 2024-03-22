@@ -1,4 +1,4 @@
-# springboot_cqrs_query_webflux_security
+# springcloud_gw_complex_circuitbreaker
 
 ***
 
@@ -6,12 +6,10 @@
 - SpringBoot Webflux : 3.2.1
   - AOP 추가
   - LogFilter 추가
-  - H2 R2DBC
-  - Router Function 추가
-  - Handler Function 추가
+  - Redis
+  - Circuitbreaker
+  - Log Util
 
-local : SpringBoot +  QUERY + WEBFLUX + H2 
-
-prd : SpringBoot +  QUERY + WEBFLUX + MariaDB
+local/prd : Spring Cloud +  Route  
 
 ***

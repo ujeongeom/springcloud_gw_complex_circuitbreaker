@@ -11,8 +11,10 @@
         <module name="springboot_crud_security_query_webflux" />
         <module name="thirdproject" />
         <module name="springboot_crud_security" />
+        <module name="springcloud_gw_complex_circuitbreaker" />
         <module name="springboot_crud_security_aop" />
         <module name="springboot_cqrs_query_webflux_security" />
+        <module name="springcloud_gw_complex" />
         <module name="springboot_cqrs_query_webflux" />
       </profile>
     </annotationProcessing>
@@ -25,6 +27,8 @@
       <module name="springboot_crud_security_aop" options="-parameters" />
       <module name="springboot_crud_security_query" options="-parameters" />
       <module name="springboot_crud_security_query_webflux" options="-parameters" />
+      <module name="springcloud_gw_complex" options="-parameters" />
+      <module name="springcloud_gw_complex_circuitbreaker" options="-parameters" />
       <module name="thirdproject" options="-parameters" />
     </option>
   </component>

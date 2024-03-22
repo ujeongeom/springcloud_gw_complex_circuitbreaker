@@ -1,7 +1,6 @@
 package com.kt.edu.thirdproject.common.aop;
 
 import com.kt.edu.thirdproject.common.annotation.ReactorCacheable;
-import com.kt.edu.thirdproject.employee.config.ReactiveCacheManager;
 import io.lettuce.core.dynamic.support.ResolvableType;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;

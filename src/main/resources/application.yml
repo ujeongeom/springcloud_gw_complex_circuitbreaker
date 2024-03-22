@@ -5,7 +5,7 @@ server:
     context-path: /
 spring:
   application:
-    name: edu-spring-data-jdbc
+    name: edu-springcloud-gw-complex
   profiles:
     active: local
   banner:
@@ -42,8 +42,8 @@ spring:
 #        url: http://localhost:8080
 
 # logging
-logging:
-  config: classpath:log4j2.xml
+#logging:
+#  config: classpath:log4j2.xml
 
 #jasypt encryptor
 jasypt:
